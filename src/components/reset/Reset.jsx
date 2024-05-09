@@ -5,7 +5,7 @@ import { reset } from '../../context/counterSlice'
 const Reset = () => {
   let dispatch = useDispatch()
   return (
-    <button onClick={() => dispatch(reset())}>Reset</button>
+    <button className='reset' onClick={() => dispatch(reset())}>Reset</button>
   )
 }
 

@@ -2,5 +2,67 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
+button {
+    cursor: pointer;
+    &:active {
+        transition: .2s;
+        scale: .98;
+    }
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        font-size: 48px;
+        font-family: sans-serif;
+        margin-bottom: 48px;
+    }
+    .wrapper {
+        display: flex;
+        gap: 48px;
+        margin-bottom: 64px;
+        .dec, .inc {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .action {
+                border: none;
+                border-radius: 8px;
+                background: #28803c;
+                color: white;
+                padding: 20px 80px;
+                font-size: 24px;
+                font-weight: 600;
+                font-family: sans-serif;
+            }
+        }
+        .display {
+            background: #fed0cd;
+            color: black;
+            width: 300px;
+            height: 144px;
+            border-radius: 8px;
+            font-size: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .reset {
+        border: none;
+        border-radius: 8px;
+        background: #28803c;
+        color: white;
+        padding: 27px 68px;
+        font-size: 22px;
+        font-family: sans-serif;
+        margin-left: 12px;
+    }
+}

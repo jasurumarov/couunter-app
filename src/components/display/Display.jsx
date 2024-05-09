@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 const Display = () => {
   let count = useSelector( state => state.counter.value)
   return (
-    <div>{count}</div>
+    <div className='display'>{count}</div>
   )
 }
 

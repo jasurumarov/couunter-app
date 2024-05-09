@@ -44,7 +44,7 @@ const Decrement = () => {
         onChange={(event, val) => setValue(val)}
         min={1} max={10000}
       />
-      <button className='action' onClick={() => dispatch(dec())}>-</button>
+      <button className='action' onClick={() => dispatch(dec(value))}>-</button>
     </div>
   )
 }

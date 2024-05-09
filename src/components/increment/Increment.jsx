@@ -34,6 +34,7 @@ const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
 
 const Increment = () => {
   const [value, setValue] = useState(1);
+  console.log(value);
   let dispatch = useDispatch()
   return (
     <div className='inc'>
@@ -44,7 +45,7 @@ const Increment = () => {
         onChange={(event, val) => setValue(val)}
         min={1} max={10000}
       />
-      <button className='action' onClick={() => dispatch(inc())}>+</button>
+      <button className='action' onClick={() => dispatch(inc(value))}>+</button>
     </div>
   )
 }

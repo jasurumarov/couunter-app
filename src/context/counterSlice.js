@@ -6,11 +6,11 @@ export const counterSlice = createSlice({
         value: 0
     },
     reducers: {
-        inc(state) {
-            state.value += 1
+        inc(state, action) {
+            state.value += action.payload
         },
-        dec(state) {
-            state.value -= 1
+        dec(state, action) {
+            state.value -= action.payload
         },
         reset(state) {
             state.value = 0

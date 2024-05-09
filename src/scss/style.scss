@@ -27,7 +27,7 @@ button {
     .wrapper {
         display: flex;
         gap: 48px;
-        margin-bottom: 64px;
+        margin-bottom: 54px;
         .dec, .inc {
             display: flex;
             flex-direction: column;
@@ -63,6 +63,5 @@ button {
         padding: 27px 68px;
         font-size: 22px;
         font-family: sans-serif;
-        margin-left: 12px;
     }
 }

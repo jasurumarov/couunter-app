@@ -47,7 +47,7 @@ const Anim = () => {
             },
             rotation: 360,
             ease: "none",
-            duration: 1
+            duration: 3
         });
     }); 
   return (

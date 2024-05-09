@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector  } from 'react-redux'
 import { dec } from '../../context/counterSlice'
 
 // MUI
@@ -33,18 +33,20 @@ const NumberInput = React.forwardRef(function CustomNumberInput(props, ref) {
 });
 
 const Decrement = () => {
-  let dispatch = useDispatch()
   const [value, setValue] = useState(1);
+  
+  let dispatch = useDispatch()
+  let count = useSelector( state => state.counter.value)
   return (
     <div className='dec'>
       <NumberInput
         aria-label="Demo number input"
-        placeholder="Type a number…"
+        placeholder="Enter the steps..."
         value={value}
         onChange={(event, val) => setValue(val)}
-        min={1} max={10000}
+        min={1} max={count}
       />
-      <button className='action' onClick={() => dispatch(dec(value))}>-</button>
+      <button disabled={count <= 0 ? true : false} className='action' onClick={() => dispatch(dec(value))}>-</button>
     </div>
   )
 }
